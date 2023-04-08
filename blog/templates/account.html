@@ -14,29 +14,29 @@
             <fieldset class="form-group">
                 <legend class="border-botton mb-4"> Account Info </legend>
                 <div class="form-group">
-                    {{ form.username.label(class="from-control-label") }}
+                    {{ form.username.label(class="from-control-label") }}<br>
                     {% if form.username.errors %}
-                        {{ form.username(class='form-control form-control-lg is-invalid') }}
+                        {{ form.username(placeholder='Enter username', class='form-control form-control-lg is-invalid') }}
                         <div class="invalid-feedback">
                             {% for error in form.username.errors %}
                                 <span>{{error}}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.username(class="from-control form-control-lg") }}
+                        {{ form.username(placeholder='Enter username', class="from-control form-control-lg") }}
                     {% endif %}
                 </div>
                 <div class="form-group">
-                    {{ form.email.label(class="from-control-label") }}
+                    {{ form.email.label(class="from-control-label") }}<br>
                     {% if form.email.errors %}
-                        {{ form.email(class='form-control form-control-lg is-invalid') }}
+                        {{ form.email(placeholder='Enter email', class='form-control form-control-lg is-invalid') }}
                         <div class="invalid-feedback">
                             {% for error in form.email.errors %}
                                 <span>{{error}}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.email(class="from-control form-control-lg") }}
+                        {{ form.email(placeholder='Enter email', class="from-control form-control-lg") }}
                     {% endif %}
                 </div>
                 <div class="form-group">
